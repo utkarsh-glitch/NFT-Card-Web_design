@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: hsl(217, 54%, 11%);
+    color: hsl(0, 0%, 100%);
+    padding: 5rem;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+.container {
+    background-color: hsl(216, 50%, 16%);
+    padding: 2rem;
+    width: 375px;
+    margin: 0 auto;
+    border-radius: 1.2em;
+    overflow: hidden;
+}
+
+.container .image {
+    position: relative;
+}
+
+.container .image div {
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 60%);
+    width: 100%;
+    height: calc(100%-4px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.container .image div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.container .image div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container h2 {
+    margin-top: 0.9em;
+}
+
+.container h2:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.container p {
+    margin-top: 1em;
+    color: hsl(0, 0%, 100%, 50%);
+}
+
+.container ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+.container ul li:first-child {
+    color: hsl(178, 100%, 50%);
+}
+
+.container .artist {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 1em;
+}
+
+.container .artist img {
+    width: 2.6rem;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    margin-right: 1.2rem;
+}
+
+.container .artist .line span {
+    color: hsl(215, 51%, 70%);
+}
+
+.line:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+@media (min-width:375px) {
+    .container {
+        width: 375px;
+        margin: 0 auto;
+    }
+}
